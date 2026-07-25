@@ -2,55 +2,39 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-self: end;
+  max-width: 440px;
   position: relative;
+  width: 100%;
 }
 
 .mascot {
   filter: drop-shadow(0 24px 35px rgba(0, 0, 0, .48));
-  margin: 0 auto -52px;
-  max-width: 390px;
+  margin: 0 auto -50px;
+  max-width: 420px;
   position: relative;
   transform: rotate(1.5deg);
-  width: min(100%, 390px);
+  width: min(100%, 420px);
   z-index: 2;
 }
 
 .hero-visual .status-card {
-  padding-top: 72px;
+  padding-top: 69px;
   width: 100%;
-}
-
-.hero-visual .status-dot {
-  top: 73px;
 }
 
 #features {
   scroll-margin-top: 24px;
 }
 
-#features > h2 {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  letter-spacing: -.045em;
-  line-height: 1.05;
-  margin: 0 0 34px;
-  max-width: 720px;
-}
-
-#features .card {
-  cursor: default;
-}
-
-#features .card:hover {
-  transform: none;
-}
-
 @media (max-width: 840px) {
   .mascot {
-    max-width: 330px;
+    max-width: 360px;
   }
 
   .hero-visual {
-    margin-top: 10px;
+    justify-self: center;
+    margin-top: 15px;
   }
 }
 
@@ -62,9 +46,5 @@
 
   .hero-visual .status-card {
     padding-top: 58px;
-  }
-
-  .hero-visual .status-dot {
-    top: 59px;
   }
 }

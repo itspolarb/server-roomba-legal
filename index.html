@@ -3,52 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Official privacy, terms, retention, and support information for Server Roomba, a command-first Discord community bot.">
-  <title>Server Roomba — Legal, Privacy & Support</title>
+  <meta name="description" content="Server Roomba is a command-first Discord community bot for moderation, tickets, verification, roles, automations, community tools, privacy controls, and more.">
+  <title>Server Roomba — Discord Community Management</title>
   <link rel="canonical" href="https://itspolarb.github.io/server-roomba-legal/">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mascot.css">
+  <link rel="icon" href="claymoreroomba.png" type="image/png">
 </head>
 <body>
   <header class="site-header wrap">
     <a class="brand" href="index.html"><span class="brand-mark">SR</span><span>Server Roomba</span></a>
     <nav class="nav" aria-label="Primary navigation">
-      <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+      <a href="#features">Features</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
       <a class="support-link" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add bot</a>
-<a class="support-link" href="support.html">Support</a><span class="beta">Public beta</span>
+      <a class="support-link" href="support.html">Support</a>
+      <span class="beta">Public beta</span>
     </nav>
   </header>
+
   <main class="wrap">
     <section class="hero">
       <div class="hero-copy">
-        <p class="kicker">Legal, privacy & support</p>
-        <h1>Clear policies.<br>No dashboard required.</h1>
-        <p>Server Roomba is a command-first Discord community bot. This site explains how the hosted service works, what it stores, and how to get help.</p>
+        <p class="kicker">One bot. Your server. Your rules.</p>
+        <h1>Community management<br>without dashboard clutter.</h1>
+        <p>Server Roomba combines moderation, tickets, verification, roles, automations, community tools, and privacy controls in one command-first Discord bot. Everything is configured inside Discord with slash commands.</p>
         <div class="actions">
           <a class="button primary" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add Server Roomba</a>
+          <a class="button secondary" href="#features">Explore features</a>
           <a class="button secondary" href="support.html">Contact support</a>
         </div>
       </div>
-      <aside class="status-card" aria-label="Policy status">
-        <span class="status-dot" aria-hidden="true"></span>
-        <p class="status-label">Policy status</p><strong>Current</strong>
-        <dl>
-          <div><dt>Effective</dt><dd>July 25, 2026</dd></div>
-          <div><dt>Service</dt><dd>Public beta</dd></div>
-          <div><dt>Setup</dt><dd>Discord commands</dd></div>
-        </dl>
-      </aside>
+
+      <div class="hero-visual">
+        <img class="mascot" src="claymoreroomba.png" alt="Server Roomba mascot: a robotic vacuum carrying a directional Claymore mine">
+        <aside class="status-card" aria-label="Service status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <p class="status-label">Service status</p>
+          <strong>Public beta</strong>
+          <dl>
+            <div><dt>Version</dt><dd>1.12.0</dd></div>
+            <div><dt>Configuration</dt><dd>Slash commands</dd></div>
+            <div><dt>Dashboard</dt><dd>Not required</dd></div>
+            <div><dt>Servers</dt><dd>Multi-server</dd></div>
+          </dl>
+        </aside>
+      </div>
     </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <p class="kicker">Built for real communities</p>
+      <h2 id="features-title">The full package, controlled from Discord.</h2>
+      <div class="cards">
+        <article class="card">
+          <span>Safety & staff tools</span>
+          <h2>Moderation and AutoMod</h2>
+          <p>Warnings, timeouts, kicks, bans, cases, message cleanup, filters, escalation, anti-raid protection, audit logs, and delegated bot managers.</p>
+        </article>
+        <article class="card">
+          <span>Organized support</span>
+          <h2>Department tickets</h2>
+          <p>Multiple ticket types, intake questions, support roles, staff notes, replies, transcripts, history, and configurable ticket panels.</p>
+        </article>
+        <article class="card">
+          <span>Member experience</span>
+          <h2>Verification and roles</h2>
+          <p>Rules and terms acceptance, member verification, autoroles, sticky roles, reaction or dropdown role menus, welcomes, goodbyes, and birthdays.</p>
+        </article>
+        <article class="card">
+          <span>Keep people involved</span>
+          <h2>Community tools</h2>
+          <p>Suggestions, polls, giveaways, tags, autoresponders, scheduled messages, starboard, counting, custom embeds, and optional XP and levels.</p>
+        </article>
+        <article class="card">
+          <span>Make it yours</span>
+          <h2>Branding and presence</h2>
+          <p>Set a server-specific nickname and help tagline, plus an owner-controlled global activity status with saved rotations and live variables.</p>
+        </article>
+        <article class="card">
+          <span>Safe by design</span>
+          <h2>Privacy and portability</h2>
+          <p>Member data controls, secret-free configuration exports, server-isolated storage, retention cleanup, automatic backups, and server data deletion controls.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="command-box">
+      <div>
+        <p class="kicker">Start inside Discord</p>
+        <h2>Invite it, run the doctor, and configure only what you need.</h2>
+      </div>
+      <code>/setup doctor&nbsp; /module list&nbsp; /help</code>
+    </section>
+
     <section class="cards" aria-label="Policies and support">
       <a class="card" href="privacy.html"><span>Data & privacy</span><h2>Privacy Policy</h2><p>What Server Roomba processes, why it is needed, and the controls available to members and server owners.</p><b>Open page →</b></a>
       <a class="card" href="terms.html"><span>Using the bot</span><h2>Terms of Service</h2><p>The rules and responsibilities that apply when inviting, configuring, or interacting with Server Roomba.</p><b>Open page →</b></a>
       <a class="card" href="retention.html"><span>Lifecycle</span><h2>Data Retention</h2><p>A plain-language schedule for operational records, server removal, backups, and member requests.</p><b>Open page →</b></a>
       <a class="card" href="support.html"><span>Get help</span><h2>Support & Abuse</h2><p>How to report a problem, privacy concern, security issue, or abusive use without exposing sensitive information.</p><b>Open page →</b></a>
     </section>
+
     <section class="command-box">
-      <div><p class="kicker">Inside Discord</p><h2>Your data controls are built in.</h2></div>
+      <div>
+        <p class="kicker">Your information</p>
+        <h2>Data controls are built into the bot.</h2>
+      </div>
       <code>/privacy data&nbsp; /privacy export&nbsp; /privacy delete</code>
     </section>
   </main>
+
   <footer class="wrap"><span>Server Roomba</span><span>Command-first Discord community management.</span></footer>
 </body>
 </html>

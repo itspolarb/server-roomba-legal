@@ -166,3 +166,10 @@ footer { border-top: 1px solid var(--border); color: var(--muted); display: flex
   html { scroll-behavior: auto; }
   .button, .card { transition: none; }
 }
+
+/* Use Server Roomba's actual mascot in the shared header. */
+.brand-mark {
+  background: #160b20 url("claymoreroomba.png") center 42% / 105% auto no-repeat;
+  font-size: 0;
+  overflow: hidden;
+}

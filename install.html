@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Install Server Roomba and understand the Discord permissions it requests.">
-  <title>Installation & Permissions — Server Roomba</title>
+  <meta name="description" content="Invite Server Roomba, choose a quickstart, and understand the Discord permissions it uses.">
+  <title>Install Server Roomba</title>
   <link rel="stylesheet" href="style.css?v=1.13.0">
   <link rel="icon" href="claymoreroomba.png" type="image/png">
 </head>
@@ -12,59 +12,64 @@
   <header class="site-header wrap">
     <a class="brand" href="index.html"><span class="brand-mark">SR</span><span>Server Roomba</span></a>
     <nav class="nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="commands.html">Commands</a>
-      <a href="install.html" aria-current="page">Install</a>
-      <a class="support-link" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add bot</a>
-      <a class="support-link" href="support.html">Support</a>
-      <span class="beta">Public beta</span>
+      <a href="index.html">Home</a><a href="commands.html">Commands</a><a href="install.html" aria-current="page">Install</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a>
+      <a class="nav-cta" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add to Discord</a>
     </nav>
   </header>
   <main class="wrap article-shell">
     <aside class="article-nav">
-      <p>On this page</p>
-      <a href="#invite">Invite</a>
-      <a href="#first-run">First run</a>
-      <a href="#permissions">Permissions</a>
-      <a href="#hierarchy">Role hierarchy</a>
-      <a href="#privacy">Privacy</a>
+      <p>Setup steps</p><a href="#invite">Invite</a><a href="#preset">Choose a preset</a><a href="#configure">Configure</a><a href="#permissions">Permissions</a><a href="#hierarchy">Role hierarchy</a><a href="#check">Final check</a>
     </aside>
     <article class="article">
-      <p class="kicker">Installation guide</p>
-      <h1>Invite, inspect, then configure.</h1>
-      <p class="effective">No hosted dashboard or incoming server port is required.</p>
+      <p class="kicker">Installation</p>
+      <h1>Start clean. Add only what you need.</h1>
+      <p class="article-lead">Server Roomba is configured with slash commands inside Discord. There is no dashboard account to create and no incoming server port to open.</p>
 
-      <h2 id="invite">1. Add Server Roomba</h2>
-      <p>Use the official invite and choose the Discord server you manage.</p>
+      <h2 id="invite">1. Invite Server Roomba</h2>
+      <p>You need permission to manage the Discord server. Choose your server on Discord’s authorization screen and approve the listed permissions.</p>
       <p><a class="button primary" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add Server Roomba</a></p>
 
-      <h2 id="first-run">2. Choose a quickstart</h2>
-      <p>Run <code>/setup quickstart</code> and choose Community, Gaming/RP, Creator/marketplace, or Custom/manual. A preset changes module recommendations and safe protection toggles only. It does not create channels, roles, filters, ticket panels, or policies.</p>
-      <p>Then configure your channels and roles and run <code>/setup doctor</code>. Use <code>/health</code> to inspect storage, scheduled work, backups, and delivery failures.</p>
+      <h2 id="preset">2. Choose a starting point</h2>
+      <p>Run <code>/setup quickstart</code>:</p>
+      <div class="preset-grid">
+        <section><h3>Community</h3><p>General moderation, onboarding, tickets, roles, and community utilities.</p></section>
+        <section><h3>Gaming/RP</h3><p>Starts with every module enabled for servers that want the complete feature set.</p></section>
+        <section><h3>Creator/marketplace</h3><p>Prioritizes moderation, verification, support, announcements, roles, and community feedback.</p></section>
+        <section><h3>Custom/manual</h3><p>Changes nothing. Use it when you want to choose each module yourself.</p></section>
+      </div>
+      <div class="notice">Quickstart does not create channels, roles, filters, rules, ticket panels, or verification policies. Those decisions stay with you.</div>
 
-      <h2 id="permissions">3. Understand requested permissions</h2>
+      <h2 id="configure">3. Connect your channels and roles</h2>
+      <p>Use <code>/setup</code> for logs, tickets, archive channels, staff roles, autoroles, protection, and delegated bot managers. Configure verification, welcome messages, ticket types, role menus, and other modules only if you plan to use them.</p>
+
+      <h2 id="permissions">4. Understand the permissions</h2>
       <table>
-        <thead><tr><th>Permission</th><th>Why it is used</th></tr></thead>
+        <thead><tr><th>Permission</th><th>Used for</th></tr></thead>
         <tbody>
-          <tr><td>View Channels / Send Messages</td><td>Commands, panels, notices, logs, tickets, and scheduled messages.</td></tr>
-          <tr><td>Embed Links / Attach Files</td><td>Readable responses, configuration exports, and ticket transcripts.</td></tr>
-          <tr><td>Read Message History</td><td>Reaction roles, starboard, counting, replies, and context-dependent tools.</td></tr>
-          <tr><td>Manage Messages / Add Reactions</td><td>AutoMod, cleanup, counting feedback, and reaction-role panels.</td></tr>
-          <tr><td>Manage Channels</td><td>Private ticket channels, ticket archives, lock/unlock, and slowmode.</td></tr>
-          <tr><td>Manage Roles / Nicknames</td><td>Autoroles, verification, role menus, quarantine, rewards, and optional nickname templates.</td></tr>
-          <tr><td>Moderate / Kick / Ban Members</td><td>Staff-requested moderation and configured automatic enforcement.</td></tr>
-          <tr><td>Mute / Move Members</td><td>Voice moderation commands.</td></tr>
+          <tr><td>View Channels, Send Messages</td><td>Commands, panels, notices, logs, tickets, and scheduled posts.</td></tr>
+          <tr><td>Embed Links, Attach Files</td><td>Readable responses, exports, backup information, and ticket transcripts.</td></tr>
+          <tr><td>Read Message History</td><td>Reaction roles, starboard, replies, and features that refer to existing messages.</td></tr>
+          <tr><td>Manage Messages, Add Reactions</td><td>AutoMod, cleanup, counting feedback, and reaction-role panels.</td></tr>
+          <tr><td>Manage Channels</td><td>Ticket channels and staff-requested channel controls.</td></tr>
+          <tr><td>Manage Roles, Manage Nicknames</td><td>Verification, autoroles, role menus, quarantine, rewards, and nickname templates.</td></tr>
+          <tr><td>Moderate, Kick, Ban Members</td><td>Staff moderation commands and configured automatic enforcement.</td></tr>
+          <tr><td>Mute, Move Members</td><td>Voice moderation.</td></tr>
         </tbody>
       </table>
-      <div class="notice"><strong>Administrator is not required.</strong> Disable modules you do not use and remove permissions they no longer need.</div>
+      <div class="notice"><strong>Administrator is not required.</strong> If you disable a module, you can also remove permissions used only by that module.</div>
 
-      <h2 id="hierarchy">4. Set the role hierarchy</h2>
-      <p>Move the Server Roomba role above every role it must assign or remove and above members it must moderate. Discord prevents the bot from acting on equal or higher roles. Server Roomba checks these limits rather than attempting to bypass them.</p>
+      <h2 id="hierarchy">5. Put its role in the right place</h2>
+      <p>Move the Server Roomba role above every role it needs to assign or remove and above members it needs to moderate. Discord blocks any bot from managing equal or higher roles.</p>
 
-      <h2 id="privacy">5. Review data controls</h2>
-      <p>Read the <a href="privacy.html">Privacy Policy</a>, <a href="retention.html">retention schedule</a>, and <a href="terms.html">Terms</a>. Members can inspect and remove voluntary data with <code>/privacy</code>. Server owners have guarded server-data controls.</p>
+      <h2 id="check">6. Run the checks</h2>
+      <div class="command-list">
+        <div><code>/setup doctor</code><p>Finds missing permissions, inaccessible channels, incomplete module setup, and role-hierarchy problems.</p></div>
+        <div><code>/health</code><p>Shows database integrity, scheduler status, command loading, failed jobs, delivery errors, and verified automatic backups.</p></div>
+        <div><code>/about</code><p>Confirms the running version and links to support, privacy, terms, and the invite.</p></div>
+      </div>
+      <p>Before opening the bot to members, review the <a href="privacy.html">Privacy Policy</a>, <a href="retention.html">retention schedule</a>, and <a href="terms.html">Terms of Service</a>.</p>
     </article>
   </main>
-  <footer class="wrap"><span>Server Roomba</span><span>Command-first Discord community management.</span></footer>
+  <footer class="wrap"><div><span class="footer-brand">Server Roomba</span><span>Version 1.13.0 · Public beta</span></div><nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></footer>
 </body>
 </html>

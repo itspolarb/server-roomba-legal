@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Server Roomba command guide for members, staff, moderators, and server managers.">
-  <title>Commands — Server Roomba</title>
+  <meta name="description" content="A practical guide to Server Roomba 1.13 commands for members, staff, and server managers.">
+  <title>Command Guide — Server Roomba</title>
   <link rel="stylesheet" href="style.css?v=1.13.0">
   <link rel="icon" href="claymoreroomba.png" type="image/png">
 </head>
@@ -12,70 +12,58 @@
   <header class="site-header wrap">
     <a class="brand" href="index.html"><span class="brand-mark">SR</span><span>Server Roomba</span></a>
     <nav class="nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="commands.html" aria-current="page">Commands</a>
-      <a href="install.html">Install</a>
-      <a class="support-link" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add bot</a>
-      <a class="support-link" href="support.html">Support</a>
-      <span class="beta">Public beta</span>
+      <a href="index.html">Home</a><a href="commands.html" aria-current="page">Commands</a><a href="install.html">Install</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a>
+      <a class="nav-cta" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add to Discord</a>
     </nav>
   </header>
   <main class="wrap article-shell">
     <aside class="article-nav">
-      <p>On this page</p>
-      <a href="#start">Getting started</a>
-      <a href="#everyone">Everyone</a>
-      <a href="#staff">Staff</a>
-      <a href="#managers">Bot managers</a>
-      <a href="#help">Discover commands</a>
+      <p>Jump to</p>
+      <a href="#start">Start here</a><a href="#members">For members</a><a href="#staff">For staff</a><a href="#manage">For managers</a><a href="#modules">Modules</a>
     </aside>
     <article class="article">
-      <p class="kicker">Command guide</p>
-      <h1>Everything happens inside Discord.</h1>
-      <p class="effective">Server Roomba 1.13 public beta</p>
-      <p>Server Roomba uses slash commands instead of a hosted dashboard. Discord only shows options appropriate to each command, and sensitive setup responses are normally visible only to the person running them.</p>
+      <p class="kicker">Version 1.13.0</p>
+      <h1>Command guide</h1>
+      <p class="article-lead">You do not need to memorize dozens of commands. Start with <code>/help</code>; Discord will show each subcommand and its required options as you type.</p>
 
-      <h2 id="start">Getting started</h2>
-      <p>Server managers should begin with:</p>
-      <ul>
-        <li><code>/setup quickstart</code> — apply safe recommendations for a community, gaming/RP, or creator/marketplace server.</li>
-        <li><code>/setup doctor</code> — check channel access, role hierarchy, permissions, and required configuration.</li>
-        <li><code>/health</code> — inspect runtime, database, scheduler, backups, failed jobs, and delivery diagnostics.</li>
-        <li><code>/module list</code> — enable only the feature groups your community needs.</li>
-      </ul>
+      <h2 id="start">Start a new server setup</h2>
+      <div class="command-list">
+        <div><code>/setup quickstart</code><p>Choose Community, Gaming/RP, Creator/marketplace, or Custom/manual. Presets adjust modules and basic protection settings; they do not create channels, roles, filters, policies, or panels.</p></div>
+        <div><code>/setup doctor</code><p>Checks permissions, role hierarchy, configured channels, tickets, verification, AutoMod, and other enabled features.</p></div>
+        <div><code>/health</code><p>Checks runtime status, storage integrity, scheduled jobs, backups, missing permissions, and failed deliveries.</p></div>
+        <div><code>/module list</code><p>Shows all 18 modules and whether each one is running.</p></div>
+      </div>
 
-      <h2 id="everyone">Member commands</h2>
-      <ul>
-        <li><code>/about</code> — version, uptime, invite, support, privacy, and terms.</li>
-        <li><code>/feedback submit</code> and <code>/feedback bug</code> — send an explicit structured report.</li>
-        <li><code>/privacy</code> — policy, retention, data inventory, export, and voluntary-data deletion.</li>
-        <li><code>/tag</code>, <code>/suggest</code>, <code>/poll</code>, <code>/remind</code>, and <code>/birthday</code> — community utilities.</li>
-        <li><code>/rank</code> and <code>/leaderboard</code> — available when levels are enabled.</li>
-      </ul>
+      <h2 id="members">Commands members can use</h2>
+      <div class="command-groups">
+        <section><h3>Information</h3><p><code>/about</code> <code>/help</code> <code>/privacy</code></p><p>Bot details, command discovery, policies, data inventory, export, and voluntary-data deletion.</p></section>
+        <section><h3>Community</h3><p><code>/tag</code> <code>/suggest</code> <code>/poll</code> <code>/remind</code> <code>/birthday</code></p><p>Saved answers, suggestions, voting, reminders, and opt-in birthday settings.</p></section>
+        <section><h3>Feedback</h3><p><code>/feedback submit</code> <code>/feedback bug</code></p><p>Sends a structured report to Server Roomba support. It includes only the fields you submit plus the bot version, server ID, and selected module.</p></section>
+        <section><h3>Levels, when enabled</h3><p><code>/rank</code> <code>/leaderboard</code></p><p>Personal rank and server leaderboards are available only when a server enables the Levels module.</p></section>
+      </div>
 
-      <h2 id="staff">Staff commands</h2>
-      <ul>
-        <li><code>/mod</code>, <code>/casework</code>, <code>/incident</code>, <code>/temprole</code>, and <code>/voice</code> — moderation operations.</li>
-        <li><code>/ticket</code> — claim, prioritize, tag, note, reply to, close, reopen, and export tickets.</li>
-        <li>Support-role access does not automatically grant moderation authority.</li>
-        <li>Discord role hierarchy is always enforced, even when the bot command permits an action.</li>
-      </ul>
+      <h2 id="staff">Commands for server staff</h2>
+      <div class="command-groups">
+        <section><h3>Moderation</h3><p><code>/mod</code> <code>/casework</code> <code>/incident</code> <code>/temprole</code> <code>/voice</code></p><p>Handle moderation actions, case history, internal incidents, temporary roles, and voice-channel controls.</p></section>
+        <section><h3>Tickets</h3><p><code>/ticket</code></p><p>Claim, prioritize, tag, note, reply to, close, reopen, and export tickets. A support role does not automatically receive moderation power.</p></section>
+      </div>
 
-      <h2 id="managers">Bot-manager commands</h2>
-      <ul>
-        <li><code>/setup</code>, <code>/module</code>, and <code>/branding</code> — server configuration and diagnostics.</li>
-        <li><code>/automod</code>, <code>/filter</code>, and <code>/raid</code> — safety controls.</li>
-        <li><code>/welcome</code>, <code>/verify</code>, and <code>/rolemenu</code> — onboarding and roles.</li>
-        <li><code>/ticket-type</code>, <code>/ticket-panel</code>, and <code>/ticket-reply</code> — service-desk configuration.</li>
-        <li><code>/autoresponder</code>, <code>/sticky</code>, <code>/schedule</code>, and <code>/embed</code> — automations.</li>
-        <li><code>/giveaway</code>, <code>/starboard</code>, <code>/counting</code>, and level configuration — community tools.</li>
-      </ul>
+      <h2 id="manage">Commands for server managers</h2>
+      <p>Server owners, members with Administrator or Manage Server, and delegated bot-manager roles can configure Server Roomba. Delegation does not grant kick, ban, timeout, or other moderation authority.</p>
+      <div class="command-groups">
+        <section><h3>Core setup</h3><p><code>/setup</code> <code>/module</code> <code>/branding</code> <code>/health</code></p></section>
+        <section><h3>Safety</h3><p><code>/automod</code> <code>/filter</code> <code>/raid</code></p></section>
+        <section><h3>Members and roles</h3><p><code>/welcome</code> <code>/verify</code> <code>/rolemenu</code></p></section>
+        <section><h3>Ticket desk</h3><p><code>/ticket-type</code> <code>/ticket-panel</code> <code>/ticket-reply</code></p></section>
+        <section><h3>Automation</h3><p><code>/autoresponder</code> <code>/sticky</code> <code>/schedule</code> <code>/embed</code></p></section>
+        <section><h3>Community settings</h3><p><code>/giveaway</code> <code>/starboard</code> <code>/counting</code> plus level, reward, achievement, season, and XP configuration.</p></section>
+      </div>
 
-      <h2 id="help">Discover commands without this page</h2>
-      <p>Run <code>/help overview</code> for command groups, <code>/help getting-started</code> for the recommended order, <code>/help permissions</code> for the access model, or <code>/help command</code> for one command group. Discord also provides descriptions for every subcommand and option.</p>
-      <div class="notice">Disabled modules keep their saved configuration but stop processing their commands and events.</div>
+      <h2 id="modules">How modules behave</h2>
+      <p>Disabling a module stops its commands and event processing but keeps its configuration. Re-enable it later and the setup is still there. Server Roomba currently includes 18 modules covering AutoMod, moderation, tickets, autoroles, role menus, raid protection, logging, welcomes, verification, birthdays, tags, suggestions, polls, automation, levels, giveaways, starboard, and counting.</p>
+      <div class="notice"><strong>Role hierarchy still wins.</strong> Discord will not let the bot manage a member or role equal to or above Server Roomba’s highest role.</div>
     </article>
   </main>
-  <footer class="wrap"><span>Server Roomba</span><span>Command-first Discord community management.</span></footer>
+  <footer class="wrap"><div><span class="footer-brand">Server Roomba</span><span>Version 1.13.0 · Public beta</span></div><nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></footer>
 </body>
 </html>

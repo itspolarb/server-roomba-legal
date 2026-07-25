@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Server Roomba command guide for members, staff, moderators, and server managers.">
+  <title>Commands — Server Roomba</title>
+  <link rel="stylesheet" href="style.css?v=1.13.0">
+  <link rel="icon" href="claymoreroomba.png" type="image/png">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">SR</span><span>Server Roomba</span></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="commands.html" aria-current="page">Commands</a>
+      <a href="install.html">Install</a>
+      <a class="support-link" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add bot</a>
+      <a class="support-link" href="support.html">Support</a>
+      <span class="beta">Public beta</span>
+    </nav>
+  </header>
+  <main class="wrap article-shell">
+    <aside class="article-nav">
+      <p>On this page</p>
+      <a href="#start">Getting started</a>
+      <a href="#everyone">Everyone</a>
+      <a href="#staff">Staff</a>
+      <a href="#managers">Bot managers</a>
+      <a href="#help">Discover commands</a>
+    </aside>
+    <article class="article">
+      <p class="kicker">Command guide</p>
+      <h1>Everything happens inside Discord.</h1>
+      <p class="effective">Server Roomba 1.13 public beta</p>
+      <p>Server Roomba uses slash commands instead of a hosted dashboard. Discord only shows options appropriate to each command, and sensitive setup responses are normally visible only to the person running them.</p>
+
+      <h2 id="start">Getting started</h2>
+      <p>Server managers should begin with:</p>
+      <ul>
+        <li><code>/setup quickstart</code> — apply safe recommendations for a community, gaming/RP, or creator/marketplace server.</li>
+        <li><code>/setup doctor</code> — check channel access, role hierarchy, permissions, and required configuration.</li>
+        <li><code>/health</code> — inspect runtime, database, scheduler, backups, failed jobs, and delivery diagnostics.</li>
+        <li><code>/module list</code> — enable only the feature groups your community needs.</li>
+      </ul>
+
+      <h2 id="everyone">Member commands</h2>
+      <ul>
+        <li><code>/about</code> — version, uptime, invite, support, privacy, and terms.</li>
+        <li><code>/feedback submit</code> and <code>/feedback bug</code> — send an explicit structured report.</li>
+        <li><code>/privacy</code> — policy, retention, data inventory, export, and voluntary-data deletion.</li>
+        <li><code>/tag</code>, <code>/suggest</code>, <code>/poll</code>, <code>/remind</code>, and <code>/birthday</code> — community utilities.</li>
+        <li><code>/rank</code> and <code>/leaderboard</code> — available when levels are enabled.</li>
+      </ul>
+
+      <h2 id="staff">Staff commands</h2>
+      <ul>
+        <li><code>/mod</code>, <code>/casework</code>, <code>/incident</code>, <code>/temprole</code>, and <code>/voice</code> — moderation operations.</li>
+        <li><code>/ticket</code> — claim, prioritize, tag, note, reply to, close, reopen, and export tickets.</li>
+        <li>Support-role access does not automatically grant moderation authority.</li>
+        <li>Discord role hierarchy is always enforced, even when the bot command permits an action.</li>
+      </ul>
+
+      <h2 id="managers">Bot-manager commands</h2>
+      <ul>
+        <li><code>/setup</code>, <code>/module</code>, and <code>/branding</code> — server configuration and diagnostics.</li>
+        <li><code>/automod</code>, <code>/filter</code>, and <code>/raid</code> — safety controls.</li>
+        <li><code>/welcome</code>, <code>/verify</code>, and <code>/rolemenu</code> — onboarding and roles.</li>
+        <li><code>/ticket-type</code>, <code>/ticket-panel</code>, and <code>/ticket-reply</code> — service-desk configuration.</li>
+        <li><code>/autoresponder</code>, <code>/sticky</code>, <code>/schedule</code>, and <code>/embed</code> — automations.</li>
+        <li><code>/giveaway</code>, <code>/starboard</code>, <code>/counting</code>, and level configuration — community tools.</li>
+      </ul>
+
+      <h2 id="help">Discover commands without this page</h2>
+      <p>Run <code>/help overview</code> for command groups, <code>/help getting-started</code> for the recommended order, <code>/help permissions</code> for the access model, or <code>/help command</code> for one command group. Discord also provides descriptions for every subcommand and option.</p>
+      <div class="notice">Disabled modules keep their saved configuration but stop processing their commands and events.</div>
+    </article>
+  </main>
+  <footer class="wrap"><span>Server Roomba</span><span>Command-first Discord community management.</span></footer>
+</body>
+</html>

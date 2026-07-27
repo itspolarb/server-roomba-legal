@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="A practical guide to Server Roomba 1.13 commands for members, staff, and server managers.">
+  <meta name="description" content="A practical guide to Server Roomba 1.13.6 commands for members, staff, and server managers.">
   <title>Command Guide — Server Roomba</title>
-  <link rel="stylesheet" href="style.css?v=1.13.3">
+  <link rel="stylesheet" href="style.css?v=1.13.6">
   <link rel="icon" href="claymoreroomba.png" type="image/png">
 </head>
 <body>
@@ -19,10 +19,10 @@
   <main class="wrap article-shell">
     <aside class="article-nav">
       <p>Jump to</p>
-      <a href="#start">Start here</a><a href="#members">For members</a><a href="#staff">For staff</a><a href="#manage">For managers</a><a href="#modules">Modules</a>
+      <a href="#start">Start here</a><a href="#members">For members</a><a href="#staff">For staff</a><a href="#manage">For managers</a><a href="#memes">Meme vault</a><a href="#counting">Counting</a><a href="#modules">Modules</a>
     </aside>
     <article class="article">
-      <p class="kicker">Version 1.13.3</p>
+      <p class="kicker">Version 1.13.6</p>
       <h1>Command guide</h1>
       <p class="article-lead">You do not need to memorize dozens of commands. Start with <code>/help</code>; Discord will show each subcommand and its required options as you type.</p>
 
@@ -31,13 +31,13 @@
         <div><code>/setup quickstart</code><p>Choose Community, Gaming/RP, Creator/marketplace, or Custom/manual. Presets adjust modules and basic protection settings; they do not create channels, roles, filters, policies, or panels.</p></div>
         <div><code>/setup doctor</code><p>Checks permissions, role hierarchy, configured channels, tickets, verification, AutoMod, and other enabled features.</p></div>
         <div><code>/health</code><p>Shows whether Server Roomba is ready and points managers to permissions, setup, or delivery problems that need attention.</p></div>
-        <div><code>/module list</code><p>Shows all 19 modules and whether each one is running.</p></div>
+        <div><code>/module list</code><p>Shows all 20 modules and whether each one is running.</p></div>
       </div>
 
       <h2 id="members">Commands members can use</h2>
       <div class="command-groups">
         <section><h3>Information</h3><p><code>/about</code> <code>/help</code> <code>/privacy</code></p><p>Bot details, command discovery, policies, data inventory, export, and voluntary-data deletion.</p></section>
-        <section><h3>Community</h3><p><code>/roll</code> <code>/tag</code> <code>/suggest</code> <code>/poll</code> <code>/remind</code> <code>/birthday</code></p><p>Tabletop dice, saved answers, suggestions, voting, reminders, and opt-in birthday settings.</p></section>
+        <section><h3>Community</h3><p><code>/roll</code> <code>/meme</code> <code>/tag</code> <code>/suggest</code> <code>/poll</code> <code>/remind</code> <code>/birthday</code></p><p>Tabletop dice, reviewed memes, saved answers, suggestions, voting, reminders, and opt-in birthday settings.</p></section>
         <section><h3>Feedback</h3><p><code>/feedback submit</code> <code>/feedback bug</code></p><p>Sends a structured report to Server Roomba support. It includes only the fields you submit plus the bot version, server ID, and selected module.</p></section>
         <section><h3>Levels, when enabled</h3><p><code>/rank</code> <code>/leaderboard</code></p><p>Personal rank and server leaderboards are available only when a server enables the Levels module.</p></section>
       </div>
@@ -56,14 +56,39 @@
         <section><h3>Members and roles</h3><p><code>/welcome</code> <code>/verify</code> <code>/rolemenu</code></p></section>
         <section><h3>Ticket desk</h3><p><code>/ticket-type</code> <code>/ticket-panel</code> <code>/ticket-reply</code></p></section>
         <section><h3>Automation</h3><p><code>/autoresponder</code> <code>/sticky</code> <code>/schedule</code> <code>/embed</code></p><p>Create reusable embeds with multiline modal editing, images, and up to 25 ordered fields—then preview and publish them without a dashboard.</p></section>
-        <section><h3>Community settings</h3><p><code>/giveaway</code> <code>/starboard</code> <code>/counting</code> plus level, reward, achievement, season, and XP configuration.</p></section>
+        <section><h3>Community settings</h3><p><code>/meme</code> <code>/giveaway</code> <code>/starboard</code> <code>/counting</code> plus level, reward, achievement, season, and XP configuration.</p></section>
+      </div>
+
+      <h2 id="memes">Meme vault</h2>
+      <p>The Meme vault is server-local and optional. Submitted images stay in a private review channel until a bot manager approves them. Every server controls its own collection, tags, submissions, and enabled sources.</p>
+      <div class="command-list">
+        <div><code>/meme random</code><p>Posts a random meme from an enabled source. Choose a source, filter the local vault by tag, or make the result private.</p></div>
+        <div><code>/meme submit</code><p>Submits a PNG, JPEG, GIF, or WebP for review with an optional caption and up to five tags.</p></div>
+        <div><code>/meme mine</code><p>Shows your recent submissions and their review status.</p></div>
+        <div><code>/meme configure</code><p>Manager command that selects the private review/storage channel and opens or closes member submissions.</p></div>
+        <div><code>/meme sources</code><p>Shows which meme sources are available and enabled. The local vault, XKCD, PG-rated GIPHY, and an allowlisted SFW Lemmy feed are supported when available.</p></div>
+        <div><code>/meme source-enable</code> <code>/meme source-disable</code><p>Lets managers decide which available sources members can use.</p></div>
+        <div><code>/meme pending</code> <code>/meme approve</code> <code>/meme reject</code> <code>/meme remove</code><p>Reviews the queue, records decisions, and removes entries that no longer belong in the collection.</p></div>
+        <div><code>/meme status</code><p>Shows the vault channel, submission state, approved and pending totals, and enabled sources.</p></div>
+      </div>
+      <div class="notice"><strong>External does not mean unfiltered.</strong> Sources are allowlisted, unsafe metadata is rejected where available, provider links are validated, and managers can disable any source. The reviewed local vault remains the safest choice for tightly controlled communities.</div>
+
+      <h2 id="counting">Counting channels</h2>
+      <p>Counting keeps progress across restarts, prevents the same member from counting twice in a row, and handles mistakes without deleting the original message. A wrong count receives a red ❌ and an explanation; managers choose whether that mistake resets progress.</p>
+      <div class="command-list">
+        <div><code>/counting setup channel:#channel reset_on_fail:True</code><p>Enables counting in the selected channel. Use <code>reset_on_fail:False</code> when mistakes should be marked and explained without resetting progress.</p></div>
+        <div><code>/counting setup channel:#new-channel confirm_reset:True</code><p>Moves counting to another channel. Confirmation is required because changing channels resets the saved count.</p></div>
+        <div><code>/counting status</code><p>Shows whether counting is enabled, its channel, current number, and reset-on-failure setting.</p></div>
+        <div><code>/counting history</code><p>Shows recent resets, the previous number, who or what caused each reset, and when it happened.</p></div>
+        <div><code>/counting reset confirm:True</code><p>Manually resets progress to zero. The next valid message is <strong>1</strong>.</p></div>
+        <div><code>/counting disable</code><p>Stops processing new counts while preserving the saved progress for later.</p></div>
       </div>
 
       <h2 id="modules">How modules behave</h2>
-      <p>Disabling a module stops its commands and event processing but keeps its configuration. Re-enable it later and the setup is still there. Server Roomba currently includes 19 modules covering AutoMod, moderation, tickets, autoroles, role menus, raid protection, logging, welcomes, verification, birthdays, tags, suggestions, polls, automation, levels, giveaways, starboard, counting, and tabletop dice.</p>
+      <p>Disabling a module stops its commands and event processing but keeps its configuration. Re-enable it later and the setup is still there. Server Roomba currently includes 20 modules covering AutoMod, moderation, tickets, autoroles, role menus, raid protection, logging, welcomes, verification, birthdays, tags, suggestions, polls, automation, levels, giveaways, starboard, counting, tabletop dice, and the Meme vault.</p>
       <div class="notice"><strong>Role hierarchy still wins.</strong> Discord will not let the bot manage a member or role equal to or above Server Roomba’s highest role.</div>
     </article>
   </main>
-  <footer class="wrap"><div><span class="footer-brand">Server Roomba</span><span>Version 1.13.3 · Public beta</span></div><nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></footer>
+  <footer class="wrap"><div><span class="footer-brand">Server Roomba</span><span>Version 1.13.6 · Public beta</span></div><nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></footer>
 </body>
 </html>

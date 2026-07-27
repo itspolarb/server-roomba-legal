@@ -6,8 +6,8 @@
   <meta name="description" content="Server Roomba is a modular Discord bot for moderation, tickets, onboarding, roles, automations, and community tools—all configured with slash commands.">
   <title>Server Roomba — Keep Your Discord in Order</title>
   <link rel="canonical" href="https://itspolarb.github.io/server-roomba-legal/">
-  <link rel="stylesheet" href="style.css?v=1.13.6">
-  <link rel="stylesheet" href="mascot.css?v=1.13.6">
+  <link rel="stylesheet" href="style.css?v=1.13.7">
+  <link rel="stylesheet" href="mascot.css?v=1.13.7">
   <link rel="icon" href="claymoreroomba.png" type="image/png">
 </head>
 <body>
@@ -27,7 +27,7 @@
   <main>
     <section class="hero wrap">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Version 1.13.6 · Public beta</p>
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Version 1.13.7 · Public beta</p>
         <h1>One bot to keep your server in order.</h1>
         <p class="hero-lead">Moderation, tickets, verification, roles, automations, and community tools without another dashboard to babysit. Set it up and run it from Discord.</p>
         <div class="actions">
@@ -47,7 +47,7 @@
           <div class="status-heading">
             <span>
               <small>Current release</small>
-              <strong>1.13.6</strong>
+              <strong>1.13.7</strong>
             </span>
             <span class="release-pill">Public beta</span>
           </div>
@@ -106,7 +106,7 @@
           <div>
             <p class="card-label">New members</p>
             <h3>Onboarding with clear rules</h3>
-            <p>Welcome and goodbye messages, verification with versioned rules and terms, suspicious-account review, autoroles, sticky roles, and self-role menus.</p>
+            <p>Welcome and goodbye messages, verification with versioned rules and terms, an optional private CAPTCHA, suspicious-account review, autoroles, sticky roles, and self-role menus.</p>
           </div>
         </article>
         <article class="feature-card">
@@ -139,7 +139,24 @@
     <section class="section wrap">
       <div class="split-panel">
         <div>
-          <p class="kicker">New in 1.13.6</p>
+          <p class="kicker">New in 1.13.7</p>
+          <h2>Add a human check to verification.</h2>
+          <p>Servers can require a short private CAPTCHA before Server Roomba grants the verified role. It works with both the simple verification panel and versioned rules-and-terms acceptance, while staff approval remains available when a member needs help.</p>
+          <a class="text-link" href="commands.html#verification">See how verification works →</a>
+        </div>
+        <div class="command-preview" aria-label="Example verification CAPTCHA workflow">
+          <div><span>Enable the human check</span><code>/verify configure captcha:True</code></div>
+          <div><span>Inspect the setup</span><code>/verify status</code></div>
+          <div><span>Publish rules and terms</span><code>/verify policy</code></div>
+          <div><span>Assist a member</span><code>/verify approve</code></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="split-panel">
+        <div>
+          <p class="kicker">Also in 1.13.6</p>
           <h2>Memes without opening the floodgates.</h2>
           <p>Each server can maintain its own reviewed meme vault. Members submit images, managers approve what fits the community, and approved posts become available through <code>/meme random</code>. Optional XKCD, PG-rated GIPHY, and an allowlisted SFW Lemmy feed add variety without replacing server control.</p>
           <a class="text-link" href="commands.html#memes">See the meme commands →</a>

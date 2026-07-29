@@ -1,37 +1,25 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Get support or report abuse involving Server Roomba."><title>Support & Abuse — Server Roomba</title>
-  <link rel="canonical" href="https://itspolarb.github.io/server-roomba-legal/support.html"><link rel="stylesheet" href="style.css?v=1.13.7">
-  <link rel="icon" href="claymoreroomba.png" type="image/png">
-</head>
-<body>
-  <header class="site-header wrap">
-    <a class="brand" href="index.html"><span class="brand-mark">SR</span><span>Server Roomba</span></a>
-    <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="commands.html">Commands</a><a href="install.html">Install</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html" aria-current="page">Support</a><a class="nav-cta" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add to Discord</a></nav>
-  </header>
-  <main class="wrap article-shell">
-    <aside class="article-nav"><p>On this page</p><a href="#contact">Contact</a><a href="#normal">Normal problems</a><a href="#abuse">Abuse & privacy</a><a href="#security">Security reports</a></aside>
-    <article class="article">
-      <p class="kicker">Help & safety</p><h1>Support & Abuse</h1><p class="effective">Server Roomba public beta</p>
-      <p>Use this page for bot problems, privacy requests, security concerns, or reports of abusive Server Roomba use.</p>
-      <div class="notice" id="contact"><strong>Email:</strong> <a href="mailto:thepolarbearr@gmail.com">thepolarbearr@gmail.com</a></div>
-
-      <h2 id="normal">Reporting a normal problem</h2>
-      <p>Include the bot version, Discord server ID, affected command or module, approximate UTC time, and the <code>ERR-...</code> reference if Server Roomba displayed one. Remove message content and member information that are not necessary to understand the problem.</p>
-
-      <h2 id="abuse">Abuse and privacy reports</h2>
-      <p>Describe the affected Discord server, behavior, impact, and relevant evidence. For a data request, include your Discord user ID and the server ID, but do not send unrelated member data. You may also use the bot’s built-in <code>/privacy</code> commands.</p>
-
-      <h2 id="security">Security reports</h2>
-      <p>Do not publish exploitable security details. Explain the affected version, reproduction, expected impact, and any sanitized logs privately. Never send a Discord token, password, environment file, production database, or unredacted private transcript.</p>
-
-      <h2>Response and resolution</h2>
-      <p>Urgent security and privacy reports will be reviewed as promptly as practical. Only evidence necessary to investigate the report should be retained, and temporary evidence should be removed when it is no longer needed.</p>
-      <p><a class="button primary" href="mailto:thepolarbearr@gmail.com?subject=Server%20Roomba%20Support">Email Server Roomba support</a></p>
-    </article>
-  </main>
-  <footer class="wrap"><div><span class="footer-brand">Server Roomba</span><span>Version 1.13.7 · Public beta</span></div><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="commands.html">Commands</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="retention.html">Retention</a><a href="support.html">Support</a></nav></footer>
-</body>
-</html>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Support — Server Roomba</title>
+<meta name="description" content="Get help with Server Roomba or report a bug."><link rel="icon" href="claymoreroomba.png"><link rel="stylesheet" href="style.css?v=1.14.0">
+</head><body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="claymoreroomba.png" alt=""><span>Server Roomba</span></a><nav class="nav-links" aria-label="Main navigation"><a href="index.html">Overview</a><a href="commands.html">Commands</a><a href="install.html">Setup</a><a aria-current="page" href="support.html">Support</a><a class="button" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&permissions=1099914406998&integration_type=0&scope=bot+applications.commands">Add to Discord</a></nav></div></header>
+<main id="main" class="wrap"><header class="page-hero"><p class="eyebrow">Help and feedback</p><h1>Start with the bot’s own diagnostics.</h1><p class="lead">Most setup problems are a missing permission, hidden channel, or role-order issue. Server Roomba can identify those directly.</p></header>
+<div class="article-layout"><nav class="side-nav" aria-label="On this page"><a href="#checks">Quick checks</a><a href="#report">Report a problem</a><a href="#include">What to include</a><a href="#contact">Contact</a></nav><article class="article">
+<section id="checks"><h2>Quick checks</h2><ol>
+  <li>Run <span class="command">/setup doctor</span> in the affected server.</li>
+  <li>Run <span class="command">/health</span> and check permissions, command registration, failed jobs, and audit delivery.</li>
+  <li>Confirm the Server Roomba role is above every role it needs to manage.</li>
+  <li>Check that the bot can view and send messages in the affected channel.</li>
+  <li>For link rules, inspect <span class="command">/links</span> settings and try a dry run before changing enforcement.</li>
+</ol></section>
+<section id="report"><h2>Feedback and bug reports</h2><p>Use <span class="command">/feedback submit</span> for general feedback or <span class="command">/feedback bug</span> for something broken. Reports include the bot version, server ID, and relevant module so the problem can be traced.</p><div class="callout">Message content is not included unless you explicitly put it in the report.</div></section>
+<section id="include"><h2>What makes a useful bug report</h2><ul>
+  <li>What you expected and what happened instead.</li>
+  <li>The command or feature you were using.</li>
+  <li>Whether the problem happens every time.</li>
+  <li>A screenshot of the response, with private information hidden.</li>
+  <li>The result of <span class="command">/health</span> or <span class="command">/setup doctor</span> when relevant.</li>
+</ul><p>Never send a Discord bot token, password, backup database, or private ticket transcript.</p></section>
+<section id="contact"><h2>Contact</h2><p>If the bot cannot submit feedback, email <a href="mailto:thepolarbearr@gmail.com">thepolarbearr@gmail.com</a>. For privacy or deletion requests, include the Discord server ID and enough detail to verify your authority.</p><p>Current supported public-beta version: <strong>1.14.0</strong>.</p></section>
+</article></div></main>
+<footer class="site-footer"><div class="wrap footer-row"><div>Server Roomba · Public beta 1.14.0</div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="retention.html">Data retention</a><a href="support.html">Support</a></div></div></footer></body></html>

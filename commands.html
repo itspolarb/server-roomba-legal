@@ -1,106 +1,55 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="A practical guide to Server Roomba 1.13.7 commands for members, staff, and server managers.">
-  <title>Command Guide — Server Roomba</title>
-  <link rel="stylesheet" href="style.css?v=1.13.7">
-  <link rel="icon" href="claymoreroomba.png" type="image/png">
-</head>
-<body>
-  <header class="site-header wrap">
-    <a class="brand" href="index.html"><span class="brand-mark">SR</span><span>Server Roomba</span></a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a><a href="commands.html" aria-current="page">Commands</a><a href="install.html">Install</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a>
-      <a class="nav-cta" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add to Discord</a>
-    </nav>
-  </header>
-  <main class="wrap article-shell">
-    <aside class="article-nav">
-      <p>Jump to</p>
-      <a href="#start">Start here</a><a href="#members">For members</a><a href="#staff">For staff</a><a href="#manage">For managers</a><a href="#verification">Verification</a><a href="#memes">Meme vault</a><a href="#counting">Counting</a><a href="#modules">Modules</a>
-    </aside>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commands — Server Roomba</title><meta name="description" content="A practical guide to Server Roomba's Discord slash commands.">
+<link rel="icon" href="claymoreroomba.png"><link rel="stylesheet" href="style.css?v=1.14.0">
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="claymoreroomba.png" alt=""><span>Server Roomba</span></a><nav class="nav-links" aria-label="Main navigation"><a href="index.html">Overview</a><a aria-current="page" href="commands.html">Commands</a><a href="install.html">Setup</a><a href="support.html">Support</a><a class="button" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&permissions=1099914406998&integration_type=0&scope=bot+applications.commands">Add to Discord</a></nav></div></header>
+<main id="main" class="wrap">
+  <header class="page-hero"><p class="eyebrow">Version 1.14.0</p><h1>Commands without the scavenger hunt.</h1><p class="lead">Type <span class="command">/</span> in Discord and choose Server Roomba. Discord shows every option as you go, so you never need to memorize syntax.</p></header>
+  <div class="article-layout">
+    <nav class="side-nav" aria-label="On this page"><a href="#start">Start here</a><a href="#members">For members</a><a href="#staff">For staff</a><a href="#managers">For managers</a><a href="#links">Link safety</a></nav>
     <article class="article">
-      <p class="kicker">Version 1.13.7</p>
-      <h1>Command guide</h1>
-      <p class="article-lead">You do not need to memorize dozens of commands. Start with <code>/help</code>; Discord will show each subcommand and its required options as you type.</p>
-
-      <h2 id="start">Start a new server setup</h2>
-      <div class="command-list">
-        <div><code>/setup quickstart</code><p>Choose Community, Gaming/RP, Creator/marketplace, or Custom/manual. Presets adjust modules and basic protection settings; they do not create channels, roles, filters, policies, or panels.</p></div>
-        <div><code>/setup doctor</code><p>Checks permissions, role hierarchy, configured channels, tickets, verification, AutoMod, and other enabled features.</p></div>
-        <div><code>/health</code><p>Shows whether Server Roomba is ready and points managers to permissions, setup, or delivery problems that need attention.</p></div>
-        <div><code>/module list</code><p>Shows all 20 modules and whether each one is running.</p></div>
-      </div>
-
-      <h2 id="members">Commands members can use</h2>
-      <div class="command-groups">
-        <section><h3>Information</h3><p><code>/about</code> <code>/help</code> <code>/privacy</code></p><p>Bot details, command discovery, policies, data inventory, export, and voluntary-data deletion.</p></section>
-        <section><h3>Community</h3><p><code>/roll</code> <code>/meme</code> <code>/tag</code> <code>/suggest</code> <code>/poll</code> <code>/remind</code> <code>/birthday</code></p><p>Tabletop dice, reviewed memes, saved answers, suggestions, voting, reminders, and opt-in birthday settings.</p></section>
-        <section><h3>Feedback</h3><p><code>/feedback submit</code> <code>/feedback bug</code></p><p>Sends a structured report to Server Roomba support. It includes only the fields you submit plus the bot version, server ID, and selected module.</p></section>
-        <section><h3>Levels, when enabled</h3><p><code>/rank</code> <code>/leaderboard</code></p><p>Personal rank and server leaderboards are available only when a server enables the Levels module.</p></section>
-      </div>
-
-      <h2 id="staff">Commands for server staff</h2>
-      <div class="command-groups">
-        <section><h3>Moderation</h3><p><code>/mod</code> <code>/casework</code> <code>/incident</code> <code>/temprole</code> <code>/voice</code></p><p>Handle moderation actions, case history, internal incidents, temporary roles, and voice-channel controls.</p></section>
-        <section><h3>Tickets</h3><p><code>/ticket</code></p><p>Claim, prioritize, tag, note, reply to, close, reopen, and export tickets. A support role does not automatically receive moderation power.</p></section>
-      </div>
-
-      <h2 id="manage">Commands for server managers</h2>
-      <p>Server owners, members with Administrator or Manage Server, and delegated bot-manager roles can configure Server Roomba. Delegation does not grant kick, ban, timeout, or other moderation authority.</p>
-      <div class="command-groups">
-        <section><h3>Core setup</h3><p><code>/setup</code> <code>/module</code> <code>/branding</code> <code>/health</code> <code>/status-panel</code></p></section>
-        <section><h3>Safety</h3><p><code>/automod</code> <code>/filter</code> <code>/raid</code></p></section>
-        <section><h3>Members and roles</h3><p><code>/welcome</code> <code>/verify</code> <code>/rolemenu</code></p></section>
-        <section><h3>Ticket desk</h3><p><code>/ticket-type</code> <code>/ticket-panel</code> <code>/ticket-reply</code></p></section>
-        <section><h3>Automation</h3><p><code>/autoresponder</code> <code>/sticky</code> <code>/schedule</code> <code>/embed</code></p><p>Create reusable embeds with multiline modal editing, images, and up to 25 ordered fields—then preview and publish them without a dashboard.</p></section>
-        <section><h3>Community settings</h3><p><code>/meme</code> <code>/giveaway</code> <code>/starboard</code> <code>/counting</code> plus level, reward, achievement, season, and XP configuration.</p></section>
-      </div>
-
-      <h2 id="verification">Verification and the optional CAPTCHA</h2>
-      <p>Members verify through a panel posted by server managers. The panel can be a simple Verify button or a versioned rules-and-terms message that records acceptance. Servers may also require Discord membership screening, a minimum account age, staff review, or a private CAPTCHA.</p>
-      <div class="command-list">
-        <div><code>/verify configure</code><p>Sets the verified and unverified roles, review channel, minimum account age, membership-screening requirement, and optional CAPTCHA. Use <code>captcha:True</code> to turn on the human check for this server.</p></div>
-        <div><code>/verify policy</code><p>Publishes the current rules, terms, optional disclaimer, and acceptance button. Publishing a new version intentionally disables older policy buttons.</p></div>
-        <div><code>/verify panel</code><p>Posts a simpler verification button when the server does not need versioned policy acceptance.</p></div>
-        <div><code>/verify status</code><p>Shows the active roles, checks, CAPTCHA setting, review queue, and current panel or policy version.</p></div>
-        <div><code>/verify pending</code> <code>/verify acceptance</code><p>Lets managers review waiting accounts and confirm whether a member accepted the active policy.</p></div>
-        <div><code>/verify approve</code> <code>/verify deny</code> <code>/verify reset</code><p>Handles staff-assisted verification and recovery. Staff approval can assist a member without requiring them to solve the CAPTCHA.</p></div>
-      </div>
-      <div class="notice"><strong>What the CAPTCHA does:</strong> it presents a short randomized arithmetic challenge in a private Discord window. Challenges expire after five minutes, and repeated wrong answers cause a temporary lock. It is a practical deterrent for basic automated joins—not identity verification or a guarantee that a member is trustworthy.</div>
-
-      <h2 id="memes">Meme vault</h2>
-      <p>The Meme vault is server-local and optional. Submitted images stay in a private review channel until a bot manager approves them. Every server controls its own collection, tags, submissions, and enabled sources.</p>
-      <div class="command-list">
-        <div><code>/meme random</code><p>Posts a random meme from an enabled source. Choose a source, filter the local vault by tag, or make the result private.</p></div>
-        <div><code>/meme submit</code><p>Submits a PNG, JPEG, GIF, or WebP for review with an optional caption and up to five tags.</p></div>
-        <div><code>/meme mine</code><p>Shows your recent submissions and their review status.</p></div>
-        <div><code>/meme configure</code><p>Manager command that selects the private review/storage channel and opens or closes member submissions.</p></div>
-        <div><code>/meme sources</code><p>Shows which meme sources are available and enabled. The local vault, XKCD, PG-rated GIPHY, and an allowlisted SFW Lemmy feed are supported when available.</p></div>
-        <div><code>/meme source-enable</code> <code>/meme source-disable</code><p>Lets managers decide which available sources members can use.</p></div>
-        <div><code>/meme pending</code> <code>/meme approve</code> <code>/meme reject</code> <code>/meme remove</code><p>Reviews the queue, records decisions, and removes entries that no longer belong in the collection.</p></div>
-        <div><code>/meme status</code><p>Shows the vault channel, submission state, approved and pending totals, and enabled sources.</p></div>
-      </div>
-      <div class="notice"><strong>External does not mean unfiltered.</strong> Sources are allowlisted, unsafe metadata is rejected where available, provider links are validated, and managers can disable any source. The reviewed local vault remains the safest choice for tightly controlled communities.</div>
-
-      <h2 id="counting">Counting channels</h2>
-      <p>Counting keeps progress across restarts, prevents the same member from counting twice in a row, and handles mistakes without deleting the original message. A wrong count receives a red ❌ and an explanation; managers choose whether that mistake resets progress.</p>
-      <div class="command-list">
-        <div><code>/counting setup channel:#channel reset_on_fail:True</code><p>Enables counting in the selected channel. Use <code>reset_on_fail:False</code> when mistakes should be marked and explained without resetting progress.</p></div>
-        <div><code>/counting setup channel:#new-channel confirm_reset:True</code><p>Moves counting to another channel. Confirmation is required because changing channels resets the saved count.</p></div>
-        <div><code>/counting status</code><p>Shows whether counting is enabled, its channel, current number, and reset-on-failure setting.</p></div>
-        <div><code>/counting history</code><p>Shows recent resets, the previous number, who or what caused each reset, and when it happened.</p></div>
-        <div><code>/counting reset confirm:True</code><p>Manually resets progress to zero. The next valid message is <strong>1</strong>.</p></div>
-        <div><code>/counting disable</code><p>Stops processing new counts while preserving the saved progress for later.</p></div>
-      </div>
-
-      <h2 id="modules">How modules behave</h2>
-      <p>Disabling a module stops its commands and event processing but keeps its configuration. Re-enable it later and the setup is still there. Server Roomba currently includes 20 modules covering AutoMod, moderation, tickets, autoroles, role menus, raid protection, logging, welcomes, verification, birthdays, tags, suggestions, polls, automation, levels, giveaways, starboard, counting, tabletop dice, and the Meme vault.</p>
-      <div class="notice"><strong>Role hierarchy still wins.</strong> Discord will not let the bot manage a member or role equal to or above Server Roomba’s highest role.</div>
+      <section id="start"><h2>Start here</h2><div class="command-grid">
+        <div class="command-card"><strong><span class="command">/setup quickstart</span></strong><p>Choose a community, gaming/RP, creator/marketplace, or manual starting point.</p></div>
+        <div class="command-card"><strong><span class="command">/setup doctor</span></strong><p>Checks permissions, role order, required channels, and module readiness.</p></div>
+        <div class="command-card"><strong><span class="command">/health</span></strong><p>Shows database, scheduler, command, permission, backup, and delivery health.</p></div>
+        <div class="command-card"><strong><span class="command">/about</span></strong><p>Shows the running version, uptime, useful links, and service details.</p></div>
+      </div></section>
+      <section id="members"><h2>For members</h2><div class="command-grid">
+        <div class="command-card"><strong><span class="command">/ticket</span></strong><p>Open and manage a private support request.</p></div>
+        <div class="command-card"><strong><span class="command">/suggest</span> · <span class="command">/poll</span></strong><p>Share an idea or ask the community a question.</p></div>
+        <div class="command-card"><strong><span class="command">/birthday</span></strong><p>Opt into birthday announcements and manage your date.</p></div>
+        <div class="command-card"><strong><span class="command">/roll</span></strong><p>Roll standard dice, modifiers, advantage, keep/drop pools, stats, percentiles, or coins.</p></div>
+        <div class="command-card"><strong><span class="command">/meme</span></strong><p>Browse safe configured meme sources or request a random post.</p></div>
+        <div class="command-card"><strong><span class="command">/rank</span> · <span class="command">/leaderboard</span></strong><p>View XP when the server has chosen to enable leveling.</p></div>
+      </div></section>
+      <section id="staff"><h2>For moderators and support staff</h2><div class="command-grid">
+        <div class="command-card"><strong><span class="command">/warn</span> · <span class="command">/timeout</span></strong><p>Document action and preserve a numbered case history.</p></div>
+        <div class="command-card"><strong><span class="command">/kick</span> · <span class="command">/ban</span></strong><p>Remove members with reasons, checks, and audit records.</p></div>
+        <div class="command-card"><strong><span class="command">/purge</span></strong><p>Remove matching messages now, with confirmation for large jobs.</p></div>
+        <div class="command-card"><strong><span class="command">/case</span> · <span class="command">/cases</span></strong><p>Review and maintain moderation history.</p></div>
+        <div class="command-card"><strong><span class="command">/lock</span> · <span class="command">/slowmode</span></strong><p>Control a busy or disruptive channel.</p></div>
+        <div class="command-card"><strong><span class="command">/ticket staff</span></strong><p>Claim, note, transfer, reply to, and close department tickets.</p></div>
+      </div></section>
+      <section id="managers"><h2>For server managers</h2><p>Configuration commands require server management permission or a delegated Server Roomba manager role.</p><div class="command-grid">
+        <div class="command-card"><strong><span class="command">/module</span></strong><p>Enable, disable, and inspect optional modules without losing their settings.</p></div>
+        <div class="command-card"><strong><span class="command">/automod</span> · <span class="command">/raid</span></strong><p>Configure filters, escalation, exemptions, join-burst protection, and dry runs.</p></div>
+        <div class="command-card"><strong><span class="command">/verification</span></strong><p>Publish versioned rules and terms, assign the member role, and optionally require CAPTCHA.</p></div>
+        <div class="command-card"><strong><span class="command">/role-menu</span> · <span class="command">/autorole</span></strong><p>Build safe self-role panels and join roles.</p></div>
+        <div class="command-card"><strong><span class="command">/automation</span></strong><p>Schedule announcements, reminders, and recurring auto-purges.</p></div>
+        <div class="command-card"><strong><span class="command">/embed</span> · <span class="command">/tag</span></strong><p>Create polished reusable messages and custom responses.</p></div>
+        <div class="command-card"><strong><span class="command">/ticket-admin</span></strong><p>Create ticket types, questions, department panels, routing, and archive behavior.</p></div>
+        <div class="command-card"><strong><span class="command">/counting</span> · <span class="command">/starboard</span></strong><p>Configure community channels, rules, reactions, and recovery controls.</p></div>
+      </div></section>
+      <section id="links"><h2>Link safety in 1.14</h2><p><span class="command">/links</span> controls unwanted invites and suspicious links without forcing every server into the same policy.</p><ul>
+        <li>Block outside Discord invites while allowing your own server or approved invites.</li>
+        <li>Maintain trusted-domain and blocked-domain lists.</li>
+        <li>Flag masked links, misleading display text, lookalike domains, URL shorteners, and risky file extensions.</li>
+        <li>Exempt trusted roles or channels and dry-run a policy before enforcement.</li>
+      </ul><div class="callout"><strong>Privacy note:</strong> Server Roomba evaluates message text and attachment names. It does not open links, follow redirects, or download attachments.</div></section>
     </article>
-  </main>
-  <footer class="wrap"><div><span class="footer-brand">Server Roomba</span><span>Version 1.13.7 · Public beta</span></div><nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></footer>
-</body>
-</html>
+  </div>
+</main>
+<footer class="site-footer"><div class="wrap footer-row"><div>Server Roomba · Public beta 1.14.0</div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="retention.html">Data retention</a><a href="support.html">Support</a></div></div></footer>
+</body></html>

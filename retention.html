@@ -1,43 +1,22 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Server Roomba data retention schedule."><title>Data Retention — Server Roomba</title>
-  <link rel="canonical" href="https://itspolarb.github.io/server-roomba-legal/retention.html"><link rel="stylesheet" href="style.css?v=1.13.7">
-  <link rel="icon" href="claymoreroomba.png" type="image/png">
-</head>
-<body>
-  <header class="site-header wrap">
-    <a class="brand" href="index.html"><span class="brand-mark">SR</span><span>Server Roomba</span></a>
-    <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="commands.html">Commands</a><a href="install.html">Install</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a class="nav-cta" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&amp;permissions=1099914406998&amp;integration_type=0&amp;scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">Add to Discord</a></nav>
-  </header>
-  <main class="wrap article-shell">
-    <aside class="article-nav"><p>Related pages</p><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="support.html">Support & Abuse</a></aside>
-    <article class="article">
-      <p class="kicker">Data lifecycle</p><h1>Retention Schedule</h1><p class="effective">Effective July 27, 2026</p>
-      <p>This schedule states Server Roomba’s default retention periods. A legal hold, security incident, or valid legal obligation may require a temporary documented exception.</p>
-      <table>
-        <thead><tr><th>Record</th><th>Default retention</th></tr></thead>
-        <tbody>
-          <tr><td>Verification CAPTCHA challenges</td><td>Temporary memory only; challenges expire after 5 minutes and failed-attempt counters after 10 minutes</td></tr>
-          <tr><td>Completed scheduled jobs</td><td>30 days</td></tr>
-          <tr><td>Automation executions</td><td>90 days</td></tr>
-          <tr><td>AutoMod violation counters</td><td>90 days</td></tr>
-          <tr><td>Entries for ended giveaways</td><td>90 days</td></tr>
-          <tr><td>Configuration history</td><td>1 year</td></tr>
-          <tr><td>Starboard tracking records</td><td>1 year</td></tr>
-          <tr><td>Meme vault entries and review history</td><td>Until manager removal or server-owner deletion</td></tr>
-          <tr><td>Active configuration and policies</td><td>Until server-owner deletion</td></tr>
-          <tr><td>Moderation cases and tickets</td><td>Until server-owner deletion</td></tr>
-          <tr><td>Removed-server data</td><td>30-day grace period, then deletion</td></tr>
-          <tr><td>Daily database backups</td><td>14 days</td></tr>
-        </tbody>
-      </table>
-      <h2>Member and server-owner controls</h2>
-      <p>Members can use <code>/privacy data</code>, <code>/privacy export</code>, and <code>/privacy delete</code>. Server owners can use the guarded <code>/setup delete-data</code> command.</p>
-      <p>Questions about a retention exception or deletion request can be sent to <a href="mailto:thepolarbearr@gmail.com">thepolarbearr@gmail.com</a>.</p>
-    </article>
-  </main>
-  <footer class="wrap"><div><span class="footer-brand">Server Roomba</span><span>Version 1.13.7 · Public beta</span></div><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="commands.html">Commands</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="retention.html">Retention</a><a href="support.html">Support</a></nav></footer>
-</body>
-</html>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Data Retention — Server Roomba</title>
+<meta name="description" content="How long Server Roomba stores operational data."><link rel="icon" href="claymoreroomba.png"><link rel="stylesheet" href="style.css?v=1.14.0">
+</head><body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="claymoreroomba.png" alt=""><span>Server Roomba</span></a><nav class="nav-links" aria-label="Main navigation"><a href="index.html">Overview</a><a href="commands.html">Commands</a><a href="install.html">Setup</a><a href="support.html">Support</a><a class="button" href="https://discord.com/oauth2/authorize?client_id=927824186410430556&permissions=1099914406998&integration_type=0&scope=bot+applications.commands">Add to Discord</a></nav></div></header>
+<main id="main" class="wrap"><header class="page-hero"><p class="eyebrow">Effective July 29, 2026</p><h1>Data Retention</h1><p class="lead">Operational records are kept only as long as they remain useful for the feature, safety, or recovery.</p></header>
+<div class="article-layout"><nav class="side-nav" aria-label="On this page"><a href="#schedule">Retention schedule</a><a href="#persistent">Persistent records</a><a href="#backups">Backups</a><a href="#deletion">Deletion</a></nav><article class="article">
+<section id="schedule"><h2>Automatic cleanup</h2><div class="command-grid">
+  <div class="command-card"><strong>Counting processed-message records</strong><p>7 days</p></div>
+  <div class="command-card"><strong>Automation execution history</strong><p>30 days</p></div>
+  <div class="command-card"><strong>Completed or failed scheduled jobs</strong><p>30 days</p></div>
+  <div class="command-card"><strong>Giveaway entries after completion</strong><p>30 days</p></div>
+  <div class="command-card"><strong>AutoMod and link-safety incidents</strong><p>90 days</p></div>
+  <div class="command-card"><strong>Configuration-change records</strong><p>90 days</p></div>
+  <div class="command-card"><strong>Starboard source records</strong><p>90 days</p></div>
+  <div class="command-card"><strong>Operational logs</strong><p>Normally limited by host log rotation</p></div>
+</div><p>The running bot performs retention cleanup automatically. A server’s configuration may specify shorter periods where supported.</p></section>
+<section id="persistent"><h2>Records kept until changed or removed</h2><p>Current server configuration, module state, role and channel mappings, active ticket data, moderation cases, published verification policies and acceptances, active automations, birthdays, custom tags, and similar feature state remain while needed to provide the configured feature or preserve required history.</p><p>Ticket transcripts and moderation cases are intentionally durable because server staff may need them later. Server managers should limit access to those records.</p></section>
+<section id="backups"><h2>Backups</h2><p>Automated SQLite backups use a WAL-safe process, integrity verification, rotation, and retention. Backups exist for operational recovery and may briefly preserve data after it has been removed from the live database. Expired backups are rotated out.</p></section>
+<section id="deletion"><h2>Deletion and departure</h2><p>Authorized server managers can delete server-specific data using the bot’s protected controls. Removing the bot alone prevents new activity but may not immediately remove existing records. Where deletion cannot be completed through Discord, contact <a href="mailto:thepolarbearr@gmail.com">thepolarbearr@gmail.com</a> with the server ID.</p></section>
+</article></div></main>
+<footer class="site-footer"><div class="wrap footer-row"><div>Server Roomba · Public beta 1.14.0</div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="retention.html">Data retention</a><a href="support.html">Support</a></div></div></footer></body></html>
